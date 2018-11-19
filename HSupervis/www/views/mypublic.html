@@ -1,0 +1,46 @@
+<ion-view view-title="流转信息详情">
+	
+    <ion-content has-bouncing="true" scroll="true" overflow-scroll="false" style="background-color: #f4f6f7;width:100%;height:100%">
+ 		<div class="handle_approve ">
+        	<div class="info_transt" ng-repeat="(key,circulate) in circulates">
+        		<div class="history" ng-click="showDetail(circulate)">
+	        		<div class="history_icon">
+	        		    <!--<i class="icon ion-edit"></i>-->
+	        		    <img src="./img/edit.png" alt="" />
+	        		</div>
+	        		<div class="arrow">
+	        			<i class="icon ion-chevron-down" ng-show="!circulate.isInfo"></i>
+	        			<i class="icon ion-chevron-up" ng-show="circulate.isInfo"></i>
+	        		</div>
+	        		<div class="history_cont">{{circulate.action}}</div>
+	        	</div>
+	        	<div class="info" ng-show="circulate.isInfo">
+	        		<div class="handle_approve_item item_padding padding-left0 none_border">
+	            		<div class="item_my_title border_right item_height">
+	            			活动名称
+	            			<div class="circle"></div>
+	            		</div>
+	            		<div class="item_my_cont item_height">{{circulate.avyInstncName1}}</div>
+	            	</div>
+	            	<div class="handle_approve_item item_padding padding-left0 none_border">
+	            		<div class="item_my_title border_right item_height">
+	            			审批通过时间
+	            			<div class="circle"></div>
+	            		</div>
+	            		<div class="item_my_cont item_height">{{circulate.tfrTimep}}</div>
+	            	</div>
+	            	<div class="handle_approve_item item_padding padding-left0 none_border">
+	            		<div class="item_my_title border_right item_height">
+	            			用户
+	            			<div class="circle"></div>
+	            		</div>
+	            		<div class="item_my_cont item_height">{{circulate.userName}}</div>
+	            	</div>
+	        	</div>
+        	</div>
+
+        </div>
+        
+    </ion-content>
+    
+</ion-view>

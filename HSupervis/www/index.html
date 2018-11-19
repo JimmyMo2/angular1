@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--initial-scale=1:确保网页加载时，以 1:1 的比例呈现，不会有任何的缩放。-->
+    <!--通常情况下，maximum-scale=1.0 与 user-scalable=no 一起使用。这样禁用缩放功能后，用户只能滚动屏幕，就能让您的网站看上去更像原生应用的感觉。-->
+    <!--device-width 可以确保它能正确呈现在不同设备上。-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>审批</title>
+
+    <!--<link rel="manifest" href="manifest.json">-->
+    <!--<link rel="icon" href="/meeting/PF/img/favicon.ico" type="image/x-icon" />-->
+    <!--<link rel="shortcut icon" href="/meeting/PF/img/favicon.ico" type="image/x-icon" />-->
+
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    
+    
+    
+    
+    
+    
+    <link href="css/style.css?version=1.1" rel="stylesheet">
+    
+    
+    <link href="css/slidingTabs.css" rel="stylesheet">
+<!--    <link href="lib/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/jquery-3.1.0.js?v=1"></script>
+    <script src="lib/ionic/js/ionic.bundle.min.js?v=1"></script> 
+    
+   <!--  <script src="/meeting/PF/js/ionic.bundle.min.js?v=1"></script>
+    <script src="/meeting/PF/js/jquery-3.1.0.js?v=1"></script> -->
+    
+    
+    <script src="lib/bootstrap-3.3.7/js/bootstrap.js?v=1"></script>
+    <script src="https://upchat.95516.net/public/scripts/app.upchat_1.1.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--<script src="cordova.js"></script>-->
+    <script src="js/app.js?version=1"></script>
+    <script src="js/controllers.js?version=1.1.6"></script>
+    <!--<script src="js/config_service.js"></script>-->
+    <script src="js/services.js?version=1.1"></script>
+    <script src="js/config_service.js?version=1.1.1"></script>
+    <script src="js/model.js"></script>
+    <script src="js/comm.js"></script>
+    <script src="js/slidingTabsDirective.js"></script>
+    
+
+  </head>
+  <body ng-app="xfAPP">
+    <ion-nav-view></ion-nav-view>
+  </body>
+
+<script>
+  $(document).ready(function () {
+  var params=sessionStorage.getItem("parameters");
+  if (params==null)
+  {
+    params="SPDB";
+  }
+  $("body").append(waterMark_bg(params));
+  });
+  function waterMark_bg(text){
+    var cf = new Array(350).join(text + "　　");
+    var emp=new Array(350).join("   ");
+    var dcWaterMark = '<div class="divWaterMark"><p class="pWaterMark">'+cf+'</p><div>';
+    return dcWaterMark;
+  }
+</script>
+</html>

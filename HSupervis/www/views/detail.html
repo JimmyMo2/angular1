@@ -1,0 +1,177 @@
+<ion-view view-title="审批详情">
+	
+    <ion-content has-bouncing="false" scroll="true" overflow-scroll="true" class="content_bg">
+		<!--<ion-scroll direction="y" scrollbar-y="false" overflow-scroll="false" has-bouncing="false" delegate-handle="leftContainerHandle" on-scroll="noScroll()" style="height:{{h}}px;overflow:auto;background:#eee">-->
+		<div style="height:100%">
+		<div class="handle_approve handle_font">
+        	<!--<div class="handle_approve_item">
+        		<div class="item_title border_right">前置任务ID</div>
+        		<div class="item_cont">{{pends.prevAvyInstncId}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">资产主键</div>
+        		<div class="item_cont">{{pends.pk_asset_clause_key}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">流程实例Id</div>
+        		<div class="item_cont">{{pends.pcsInstncId}}</div>
+        	</div>-->
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">项目名称</div>
+        		<!--<div class="item_date">天</div>-->
+        		<div class="item_cont">{{pends.projectName}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">资产三类</div>
+        		<div class="item_cont">{{pends.assetThirdType}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">所属分行</div>
+        		<div class="item_cont">{{pends.branchCode}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">总行联系人</div>
+        		<div class="item_cont">{{pends.branchSponsorLinkman}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">分行联系人</div>
+        		<div class="item_cont">{{pends.branchSponsor}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">起息日</div>
+        		<div class="item_cont">{{pends.assetInterestEffectDay}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">到期日</div>
+        		<div class="item_cont">{{pends.assetExpireDay}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">资产期限</div>
+        		<div class="item_cont">{{pends.assetPeriod}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">融资主体名称</div>
+        		<div class="item_cont">{{pends.financeName}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">融资主体内部评级</div>
+        		<div class="item_cont">{{pends.financingBodyInnerRating}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">是否我行托管</div>
+        		<div class="item_cont">{{pends.projectTrusteeship}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">是否分行合规已审核</div>
+        		<div class="item_cont">{{pends.isBranchActived}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">是否须配置分行个性化产品</div>
+        		<div class="item_cont">{{pends.needBranchPersonalize}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">收益率方式</div>
+        		<div class="item_cont">{{pends.incomeRateRule}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">理财端收益率</div>
+        		<div class="item_cont">{{pends.interestRateSpreads}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">付息频率</div>
+        		<div class="item_cont">{{pends.assetPayInterestFrequency}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">优先劣后比例</div>
+        		<div class="item_cont">{{pends.gfblRate}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">预警线</div>
+        		<div class="item_cont">{{pends.warningLine}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">止损线</div>
+        		<div class="item_cont">{{pends.warningLine}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">股票名称</div>
+        		<div class="item_cont">{{pends.StockName}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">最终风险承担主体</div>
+        		<div class="item_cont">{{pends.finalAssumeSubject}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">资金投向是否政府融资平台</div>
+        		<div class="item_cont">{{pends.isGovFinancingPlatfrom}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">资金投向是否'两高一剩'</div>
+        		<div class="item_cont">{{pends.isSpecflagOfFinancingBody}}</div>
+        	</div>
+        	<div class="handle_approve_item">
+        		<div class="item_title border_right">股权退出方式</div>
+        		<div class="item_cont">{{pends.stockEquity}}</div>
+        	</div>
+        	
+        </div>
+        
+        <form name="myForm">
+        	<!--<div class="handle_approve approve_history" ng-click="goHistory()">历史流转信息</div>-->
+        <div class="handle_approve " ng-click="goHistory()">
+        	<div class="info_transt">
+        		<div class="history border_none_top" ng-click="showDetail()">
+	        		<div class="history_icon">
+	        		    <img src="./img/notepad.png" alt="" />
+	        		</div>
+	        		<div class="arrow">
+	        			<i class="icon ion-chevron-up"></i>
+	        		</div>
+	        		<div class="history_cont history_title">历史流转信息</div>
+	        	</div>
+	        	<!--<div class="info" >
+	        		<div class="handle_approve_item item_padding padding-left0 none_border" ng-repeat="circulate in pends.circulation">
+	            		<div class="item_title border_right item_height">
+	            			流转意见
+	            			<div class="circle"></div>
+	            		</div>
+	            		<div class="item_cont item_height">{{circulate.circulate}}</div>
+	            	</div>
+	            
+	        	</div>-->
+        	</div>
+        </div>
+	        <div class="handle_approve">
+	        	<div class="handle_approve_item approve_info">
+	        		<div class="item_title ">审批信息</div>
+	        	</div>
+	        	<div class="handle_approve_item">
+	        		<div class="item_title " style="float:left">流转意见</div>
+	        		<div class="item_title " style="color:red;float:left" ng-if="myForm.comment.$error.required"">流转意见不能为空哦</div>
+	        	</div>
+	        	<div class="handle_approve_item text_area_height">
+	        		<textarea name="comment" class="approve_textarea" required rows="5" cols="10" ng-model="myApproveLists.comment"></textarea>
+	        	</div>
+	        	<div class="handle_approve_item">
+	        		<div class="item_title" style="float:left">批复意见</div>
+	        		<div class="item_title " style="color:red;float:left" ng-if="myForm.replyComment.$error.required"">批复意见不能为空哦</div>
+	        	</div>
+	        	<div class="handle_approve_item text_area_height">
+	        		<textarea name="replyComment" class="approve_textarea" required rows="5" cols="10" ng-model="myApproveLists.replyComment"></textarea>
+	        	</div>
+	        </div>
+        
+        <div class="handle_approve_btn">
+        	<div class="handle_btn">
+        		<button class="btn_handle btn_bg_ok" ng-disabled="!myForm.$valid" ng-click="pass()">通过</button>
+        		<button class="btn_handle btn_bg_cancel" ng-disabled="!myForm.$valid" ng-click="stop()">终止</button>
+        		<button class="btn_handle btn_bg_back" ng-disabled="!myForm.$valid" ng-click="back()">回退</button>
+        	</div>
+        </div>
+        </form>
+        <div style="height:100px;width:100%;"></div>
+        </div>
+		<!--</ion-scroll>-->	
+    </ion-content>
+</ion-view> 
+

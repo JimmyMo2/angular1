@@ -1,0 +1,27 @@
+{
+	"taskInf":[
+		{
+			"avyInstncName1":"分行业务发起1",
+			"tfrTimep":"2018-03-15",
+			"userName":"11063424",
+			"action":"未审批",
+			"comment":"资产良好",
+			"replyComment":"资产良好"
+		},{
+			"avyInstncName1":"分行业务发起2",
+			"tfrTimep":"2018-03-16",
+			"userName":"11063424",
+			"action":"正在审批",
+			"comment":"资产良好",
+			"replyComment":"资产良好"
+		},
+		{
+			"avyInstncName1":"分行业务发起3",
+			"tfrTimep":"2018-03-17",
+			"userName":"11063424",
+			"action":"通过",
+			"comment":"资产良好",
+			"replyComment":"资产良好"
+		}
+	]
+}

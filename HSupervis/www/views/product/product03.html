@@ -1,0 +1,26 @@
+
+<div class="product_main">
+    <div class="publictop pro_content" ng-click="detail(item)"  ng-repeat="item in list2 track by $index">
+        <div class="xf-vr">
+            <img src="{{item.img}}" ></div>
+        <div class="padleft-5">
+            <img src="img/loverg_small.png">
+            <b class="comm_font">#拍卖#{{item.name}}</b>
+        </div>
+        <div class="comm_font padleft-5">
+            <p class="commfont_per">拍卖人:{{item.sname}}</p>
+            <p class="commfont_department">部门:{{item.sdepartment}}</p></div>
+
+        <div class="current_comm padleft-5" ng-show="item.status == 1">
+            <p class="commfont_curr">当前<b class="comm_font font_red">￥{{item.mprice}}</b></p>
+            <p class="commfont_number">出价{{item.dcount}}次</p>
+        </div>
+
+
+
+        <div class="current_comm padleft-5" ng-show="item.status == 0">
+            <p class="commfont_price"><b class="comm_font font_red">￥{{item.mprice}}</b></p>
+            <p class="commfont_number">起拍价</p>
+        </div>
+    </div>
+</div>

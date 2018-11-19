@@ -1,0 +1,97 @@
+<ion-view view-title="我的审批">
+	
+    <ion-content has-bouncing="true" scroll="true" overflow-scroll="true" class="content_bg">
+      	<div class="list_approve" ng-repeat="approve in myApproves" ng-click="goDetail(approve.pcsInstncId)">
+      		<div class="list_content_top">
+      			{{approve.pcsInstncName}}
+      		</div>
+      		<div class="list_content_center">
+      			<div class="center_left">
+      				<div class="center_left_title">审批单号:</div>
+      				<div class="center_left_cont">{{approve.pcsInstncId}}</div>
+      			</div>
+      			
+      		</div>
+      		<div class="list_content_center">
+      			<div class="center_left">
+      				<div class="center_left_title">事项类型:</div>
+      				<div class="center_left_cont">{{approve.bizName}}</div>
+      			</div>
+      		</div>
+      		<div class="list_content_center">
+      			<div class="center_left">
+      				<div class="center_left_title">当前任务:</div>
+      				<div class="center_left_cont">{{approve.taskName}}</div>
+      			</div>
+      			
+      		</div>
+      		<div class="list_content_center">
+      			
+      			<div class="center_left">
+      				<div class="center_left_title">上一步处理人:</div>
+      				<div class="center_left_cont">{{approve.lastUpdateUser}}</div>
+      			</div>
+      		</div>
+      		<!--<div class="list_content_bottom">
+      			<div class="content_bottom_left">操作详情</div>
+      			<div class="content_bottom_right">
+      				<div class="approve_detail" ng-click="goHistory()">详情</div>
+      				<div class="approve_handle" ng-click="handle(approve.pcsInstncId)">处理</div>
+      			</div>
+      		</div>-->
+      	</div>	
+	</ion-content>
+	<i class='icon ion-search' ng-click="modal.show()" style="position:fixed;bottom:2rem;right:1rem;font-size:1rem;color:blueviolet;transform:rotate(90deg)"></i>
+</ion-view> 
+<script id="templates/modal.html" type="text/ng-template">
+	<ion-modal-view>
+			<!-- <ion-header-bar class="bar bar-header bar-positive">
+				<h1 class="title">title</h1>
+			</ion-header-bar> -->
+			<ion-content>
+				<div>
+					<label class="item item-input item-select">
+						<span>资产名称</span>
+						<!-- <ion-checkbox></ion-checkbox> -->
+						<select>
+								<option></option>
+								<option></option>
+								<option></option>
+							</select>
+					</label>
+					<label class="item item-input item-select">
+						<span class="input-label">所属分行</span>
+						<!-- <input type="text" ng-model="searchList.bank"> -->
+						<select>
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+					</label>
+					<label class="item item-input item-select">
+						<span class="input-label">资产状态</span>
+						<!-- <input type="text" ng-model="searchList.status"> -->
+						<select>
+								<option></option>
+								<option></option>
+								<option></option>
+							</select>
+					</label>
+					<label class="item item-input item-select">
+						<span class="input-label">资产类别</span>
+						<!-- <input type="text" ng-model="searchList.category"> -->
+						<select>
+								<option></option>
+								<option></option>
+								<option></option>
+							</select>
+					</label>
+					<div class="btn_container">
+					<button class="button  button-positive" ng-click="search(searchList)">搜索</button>
+					<button class="button  button-energized" ng-click="modal.hide()">取消</button>
+					</div>
+				</div>
+			</ion-content>
+	</ion-modal-view>
+</script>
+

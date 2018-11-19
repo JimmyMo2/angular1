@@ -1,0 +1,21 @@
+{
+	"ReturnCd":1,
+	"RspMsg":[
+		{
+			"pcsInstncId":"001",
+			"pcsInstncName":"11077622的资产委托单 债券类资产  100,000元",
+			"entityId":"5001877",
+			"bizName":"委托审批流程",
+			"taskName":"投足总监审批",
+			"lastUpdateUser":"11063424"
+		},
+		{
+			"pcsInstncId":"002",
+			"pcsInstncName":"11077622的资产委托单 债券类资产  100,000元",
+			"entityId":"5001877",
+			"bizName":"委托审批流程",
+			"taskName":"投足总监审批",
+			"lastUpdateUser":"11063424"
+		}
+	]
+}
